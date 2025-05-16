@@ -11,7 +11,7 @@ export IMAGE=${IMAGE-$IMAGE_URL}
 
 export DOCKERFILE=${DOCKERFILE-docker/Dockerfile}
 export CONTEXT=${CONTEXT-.}
-export TLSVERIFY=${TLSVERIFY-false}
+export TLSVERIFY=${TLSVERIFY-true}
 export BUILD_ARGS=${BUILD_ARGS-""}
 export BUILD_ARGS_FILE=${BUILD_ARGS_FILE-""}
 
@@ -19,7 +19,7 @@ export BUILD_ARGS_FILE=${BUILD_ARGS_FILE-""}
 export DISABLE_ACS=${DISABLE_ACS-false}
 # Optionally set ROX_CENTRAL_ENDPOINT here instead of configuring a Jenkins secret
 # export ROX_CENTRAL_ENDPOINT=central-acs.apps.user.cluster.domain.com:443
-export INSECURE_SKIP_TLS_VERIFY=${INSECURE_SKIP_TLS_VERIFY-true}
+export INSECURE_SKIP_TLS_VERIFY=${INSECURE_SKIP_TLS_VERIFY-false}
 
 # for gitops, if acs scans are set, we still may not want that repo 
 # to be updates so include an option to disable
